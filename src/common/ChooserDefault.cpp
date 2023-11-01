@@ -38,17 +38,17 @@ void CRepresentationChooserDefault::Initialize(const ADP::KODI_PROPS::ChooserPro
 {
   auto settings = CSrvBroker::GetSettings();
 
-  m_screenResMax = settings->GetResMax();
-  m_screenResSecureMax = settings->GetResSecureMax();
+  m_screenResMax = settings.GetResMax();
+  m_screenResSecureMax = settings.GetResSecureMax();
 
-  m_bandwidthInitAuto = settings->IsBandwidthInitAuto();
-  m_bandwidthInit = settings->GetBandwidthInit();
+  m_bandwidthInitAuto = settings.IsBandwidthInitAuto();
+  m_bandwidthInit = settings.GetBandwidthInit();
 
-  m_bandwidthMin = settings->GetBandwidthMin();
-  m_bandwidthMax = settings->GetBandwidthMax();
+  m_bandwidthMin = settings.GetBandwidthMin();
+  m_bandwidthMax = settings.GetBandwidthMax();
 
-  m_ignoreScreenRes = settings->IsIgnoreScreenRes();
-  m_ignoreScreenResChange = settings->IsIgnoreScreenResChange();
+  m_ignoreScreenRes = settings.IsIgnoreScreenRes();
+  m_ignoreScreenResChange = settings.IsIgnoreScreenResChange();
 
   // Override settings with Kodi/video add-on properties
 

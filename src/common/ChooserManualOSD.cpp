@@ -27,15 +27,15 @@ void CRepresentationChooserManualOSD::Initialize(const ADP::KODI_PROPS::ChooserP
 {
   auto settings = CSrvBroker::GetSettings();
 
-  SETTINGS::StreamSelMode manualSelMode = settings->GetStreamSelMode();
+  SETTINGS::StreamSelMode manualSelMode = settings.GetStreamSelMode();
 
   if (manualSelMode == SETTINGS::StreamSelMode::MANUAL_VIDEO)
     m_streamSelectionMode = StreamSelection::MANUAL_VIDEO_ONLY;
   else
     m_streamSelectionMode = StreamSelection::MANUAL;
 
-  m_screenResMax = settings->GetResMax();
-  m_screenResSecureMax = settings->GetResSecureMax();
+  m_screenResMax = settings.GetResMax();
+  m_screenResSecureMax = settings.GetResSecureMax();
 
   LOG::Log(LOGDEBUG,
            "[Repr. chooser] Configuration\n"
